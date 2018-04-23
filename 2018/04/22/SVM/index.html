@@ -119,14 +119,12 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="c:/Users/xiaoJane/blog/public/images/3.png">
 <meta property="og:image" content="c:/Users/xiaoJane/blog/public/images/DAG_SVM.png">
-<meta property="og:updated_time" content="2018-04-23T08:25:57.202Z">
+<meta property="og:updated_time" content="2018-04-23T12:37:28.254Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SVM">
 <meta name="twitter:description" content="SVMSVM在解决小样本、非线性及高维模式识别中表现出许多特有的优势，并能够推广应用到函数拟合等其他机器学习问题中。 支持向量机方法是建立在统计学习理论的VC 维理论和结构风险最小原理基础上的，根据有限的样本信息在模型的复杂性（即对特定训练样本的学习精度）和学习能力（即无错误地识别任意样本的能力）之间寻求最佳折衷，以期获得最好的推广能力[14]（或称泛化能力）。 所谓VC维是对函数类的一种度量，V">
 <meta name="twitter:image" content="c:/Users/xiaoJane/blog/public/images/3.png">
 
-
-  
 
 
   <link rel="alternate" href="/atom.xml" title="xiaoJane" type="application/atom+xml" />
@@ -275,7 +273,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档<span class="badge">2</span></a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档<span class="badge">3</span></a>
   </li>
 
       
@@ -487,12 +485,13 @@
 <h2 id="核函数"><a href="#核函数" class="headerlink" title="核函数"></a>核函数</h2><p>参考链接<a href="http://www.blogjava.net/zhenandaci/" target="_blank" rel="noopener">Jasper’s Java Jacal</a></p>
 <p>提供的样本线性不可分，线性分类器求解程序会无限循环，如何将不可分数据变得线性可分？</p>
 <p>二维空间的线性函数（直线）不能将两类正确分开。但曲线可以，问题是它不是一个线性函数。</p>
-<p>$y=[ \begin{matrix}  y_1 \  y_2\  y_3\end{matrix}]=[ \begin{matrix}  1 \ x\ x^2\end{matrix}]$,$a=[ \begin{matrix}  a_1 \  a_2\  a_3\end{matrix}]=[ \begin{matrix}   c_0\ c_1\c_2\end{matrix}]$   对于$g(x)=c_0+c_1x+c_2x^2$</p>
+<p>$y=[ \begin{matrix}  y_1 \  y_2\  y_3\end{matrix}]=[ \begin{matrix}  1 \ x\ x^2\end{matrix}]$,$a=[ \begin{matrix}  a_1 \  a_2\  a_3\end{matrix}]=[ \begin{matrix}  c_0 \  c_1\  c_2\end{matrix}]$   </p>
+<p>对于$g(x)=c_0+c_1x+c_2x^2$</p>
 <p>这样g(x)可以转化为$f(y)=&lt;a,y&gt;$ <code>在任意维度空间，这种形式的函数都是一个线性函数</code></p>
 <p><code>原来在二维空间中一个线性不可分的问题，映射到四维空间后，变成了线性可分的！</code></p>
-<p>例如：我们文本问题的原始空间是1000维（即每个被分类的文档被表示为一个1000维的向量），现在我们有一个2000维空间里的线性函数$f(x’)=<w',x'>+b,其中w’和x’都为2000维向量$ </w',x'></p>
+<p>例如：我们文本问题的原始空间是1000维（即每个被分类的文档被表示为一个1000维的向量），现在我们有一个2000维空间里的线性函数    $f(x’)=<w',x'>+b$ ,其中w’和x’都为2000维向量</w',x'></p>
 <p><code>分类的过程是先把x变换为2000维的向量x’，然后求这个变换后的向量x’与向量w’的内积，再把这个内积的值和b相加，就得到了结果，看结果大于阈值还是小于阈值就得到了分类结果。</code></p>
-<p>线性分类器：$f(x’)=\sum_{i=1}^{n} a_iy_i&lt;x_i’,x’&gt;+b$</p>
+<p>线性分类器：$f(x’)=\sum_{i=1}^{n} a_iy_i&lt;x_i’,x’&gt;+b​$</p>
 <p>用低维空间里的函数代替：$g(x)=\sum_{i=1}^{n}a_iy_iK(x_i,x)+b$</p>
 <p>直接拿低维的输入向g(x)代入，<code>核函数K()的作用是接受两个低维空间里的向量，能够计算出经过某个变换后在高维空间里的向量内积值。</code></p>
 <hr>
@@ -626,6 +625,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2018/04/23/文本分类/" rel="prev" title="文本分类">
+                文本分类 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -698,7 +701,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
